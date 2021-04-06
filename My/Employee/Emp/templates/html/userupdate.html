@@ -1,0 +1,20 @@
+{% extends 'html/header.html' %}
+{% block title %} Delete User{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-5 mt-5">
+		<h3 class="bg-info text-white text-center border rounded mt-3">update user details</h3>
+		<div class="card-body">
+			<form method="POST">
+				{% csrf_token %}
+			{{p.as_p}}
+				<input type="submit" value="update" class="btn btn-success btn-block my-2">
+
+			</form>
+			 
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
